@@ -70,8 +70,8 @@ function Bmr() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 bg-gray-200 text-black">
-      <h2 className="text-2xl font-bold mb-4 bg-green-700 p-8 text-white">
+    <div className="container rounded mx-auto px-4 py-8 bg-gray-200 text-black">
+      <h2 className="text-2xl font-bold mb-4 bg-green-700 p-8 text-white rounded">
         BMR Calculator
       </h2>
       <div className="mb-4">
@@ -127,36 +127,31 @@ function Bmr() {
           </div>
         </div>
       ) : (
-        <div className="mb-4 flex ">
-          <div className="mr-4">
-            <label htmlFor="heightFeet" className="block mb-2 font-medium">
-              Height:
-            </label>
+        <div className="mb-4">
+          <label htmlFor="height" className="block mb-2 font-medium ">
+            Height:
+          </label>
+          <div className="flex">
             <div className="flex items-center">
               <input
                 type="number"
                 id="heightFeet"
                 value={heightFeet}
                 onChange={(e) => setHeightFeet(e.target.value)}
-                className="border rounded px-2 py-1"
+                className="border rounded px-2 py-1 w-4/5"
                 required
               />
               <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
                 Feet
               </span>
             </div>
-          </div>
-          <div>
-            <label htmlFor="heightInches" className="block mb-2 font-medium">
-              Height (inches):
-            </label>
-            <div className="flex items-center">
+            <div className="flex items-center ml-2">
               <input
                 type="number"
                 id="heightInches"
                 value={heightInches}
                 onChange={(e) => setHeightInches(e.target.value)}
-                className="border rounded px-2 py-1"
+                className="border rounded px-2 py-1 w-4/5"
                 required
               />
               <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
