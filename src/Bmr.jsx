@@ -92,61 +92,77 @@ function Bmr() {
         <label htmlFor="weight" className="block mb-2 font-medium">
           Body Weight:
         </label>
-        <input
-          type="number"
-          id="weight"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          className="border rounded px-2 py-1 w-full"
-          required
-        />
-        {measurementUnit === "metric" ? (
-          <span className="ml-2">kg</span>
-        ) : (
-          <span className="ml-2">lbs</span>
-        )}
+        <div className="mb-4 flex items-center">
+          <input
+            type="number"
+            id="weight"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+            className="border rounded px-2 py-1 w-full"
+            required
+          />
+          <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+            {measurementUnit === "metric" ? "kg" : "lbs"}
+          </span>
+        </div>
+
       </div>
       {measurementUnit === "metric" ? (
         <div className="mb-4">
           <label htmlFor="heightCm" className="block mb-2 font-medium">
-            Height (cm):
+            Height
           </label>
-          <input
-            type="number"
-            id="heightCm"
-            value={heightCm}
-            onChange={(e) => setHeightCm(e.target.value)}
-            className="border rounded px-2 py-1 w-full"
-            required
-          />
-        </div>
-      ) : (
-        <div className="mb-4 flex">
-          <div className="mr-4">
-            <label htmlFor="heightFeet" className="block mb-2 font-medium">
-              Height (feet):
-            </label>
+          <div className="mb-4 flex items-center">
             <input
               type="number"
-              id="heightFeet"
-              value={heightFeet}
-              onChange={(e) => setHeightFeet(e.target.value)}
-              className="border rounded px-2 py-1"
+              id="heightCm"
+              value={heightCm}
+              onChange={(e) => setHeightCm(e.target.value)}
+              className="border rounded px-2 py-1 w-full"
               required
             />
+            <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+              Cm
+            </span>
+          </div>
+        </div>
+      ) : (
+        <div className="mb-4 flex ">
+          <div className="mr-4">
+            <label htmlFor="heightFeet" className="block mb-2 font-medium">
+              Height:
+            </label>
+            <div className="flex items-center">
+              <input
+                type="number"
+                id="heightFeet"
+                value={heightFeet}
+                onChange={(e) => setHeightFeet(e.target.value)}
+                className="border rounded px-2 py-1"
+                required
+              />
+              <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+                Feet
+              </span>
+            </div>
           </div>
           <div>
             <label htmlFor="heightInches" className="block mb-2 font-medium">
               Height (inches):
             </label>
-            <input
-              type="number"
-              id="heightInches"
-              value={heightInches}
-              onChange={(e) => setHeightInches(e.target.value)}
-              className="border rounded px-2 py-1"
-              required
-            />
+            <div className="flex items-center">
+              <input
+                type="number"
+                id="heightInches"
+                value={heightInches}
+                onChange={(e) => setHeightInches(e.target.value)}
+                className="border rounded px-2 py-1"
+                required
+              />
+              <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+                Inches
+              </span>
+            </div>
           </div>
         </div>
       )}
@@ -217,11 +233,11 @@ function Bmr() {
         </button>
       </div>
       {bmr && (
-        <div>
-          <label className="block mb-2 font-medium" htmlFor="bmrResult">
+        <div className="bg-blue-300 p-8 m-4 rounded ">
+          {/* <label className="block mb-2 font-medium" htmlFor="bmrResult">
             BMR:
-          </label>
-          <span id="bmrResult">{bmr} calories/day</span>
+          </label> */}
+          <span className="text-2xl font-bold" id="bmrResult">{bmr}</span>
         </div>
       )}
     </div>
