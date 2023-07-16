@@ -82,7 +82,7 @@ function Bmr() {
           id="measurementUnit"
           value={measurementUnit}
           onChange={(e) => setMeasurementUnit(e.target.value)}
-          className="border rounded px-2 py-1 w-full"
+          className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
         >
           <option value="metric">Metric (kg/cm)</option>
           <option value="imperial">Imperial (lbs/in)</option>
@@ -92,16 +92,16 @@ function Bmr() {
         <label htmlFor="weight" className="block mb-2 font-medium">
           Body Weight:
         </label>
-        <div className="mb-4 flex items-center">
+        <div className="relative flex h-10 w-full overflow-clip">
           <input
             type="number"
             id="weight"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            className="border rounded px-2 py-1 w-full"
+            className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
             required
           />
-          <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+          <span className="flex items-center border border-slate-400 bg-slate-50 px-2 text-sm text-slate-400 transition-colors duration-300 peer-focus:border-sky-400 peer-focus:bg-sky-400 peer-focus:text-white">
             {measurementUnit === "metric" ? "kg" : "lbs"}
           </span>
         </div>
@@ -112,16 +112,16 @@ function Bmr() {
           <label htmlFor="heightCm" className="block mb-2 font-medium">
             Height
           </label>
-          <div className="mb-4 flex items-center">
+          <div className="relative flex h-10 w-full overflow-clip">
             <input
               type="number"
               id="heightCm"
               value={heightCm}
               onChange={(e) => setHeightCm(e.target.value)}
-              className="border rounded px-2 py-1 w-full"
+              className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
               required
             />
-            <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+            <span className="flex items-center border border-slate-400 bg-slate-50 px-2 text-sm text-slate-400 transition-colors duration-300 peer-focus:border-sky-400 peer-focus:bg-sky-400 peer-focus:text-white">
               Cm
             </span>
           </div>
@@ -132,29 +132,29 @@ function Bmr() {
             Height:
           </label>
           <div className="flex">
-            <div className="flex items-center">
+            <div className="relative flex h-10 w-full overflow-clip">
               <input
                 type="number"
                 id="heightFeet"
                 value={heightFeet}
                 onChange={(e) => setHeightFeet(e.target.value)}
-                className="border rounded px-2 py-1 w-4/5"
+                className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none w-4/5"
                 required
               />
-              <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+              <span className="flex items-center border border-slate-400 bg-slate-50 px-2 text-sm text-slate-400 transition-colors duration-300 peer-focus:border-sky-400 peer-focus:bg-sky-400 peer-focus:text-white">
                 Feet
               </span>
             </div>
-            <div className="flex items-center ml-2">
+            <div className="relative flex h-10 w-full overflow-clip ml-2">
               <input
                 type="number"
                 id="heightInches"
                 value={heightInches}
                 onChange={(e) => setHeightInches(e.target.value)}
-                className="border rounded px-2 py-1 w-4/5"
+                className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none w-4/5"
                 required
               />
-              <span className="ml-2 bg-gray-500 text-white px-2 py-1 rounded">
+              <span className="flex items-center border border-slate-400 bg-slate-50 px-2 text-sm text-slate-400 transition-colors duration-300 peer-focus:border-sky-400 peer-focus:bg-sky-400 peer-focus:text-white">
                 Inches
               </span>
             </div>
@@ -170,7 +170,7 @@ function Bmr() {
           id="age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
-          className="border rounded px-2 py-1 w-full"
+          className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
           required
         />
       </div>
@@ -182,7 +182,7 @@ function Bmr() {
           id="gender"
           value={gender}
           onChange={(e) => setGender(e.target.value)}
-          className="border rounded px-2 py-1 w-full"
+          className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
         >
           <option value="female">Female</option>
           <option value="male">Male</option>
@@ -196,7 +196,7 @@ function Bmr() {
           id="activityLevel"
           value={activityLevel}
           onChange={(e) => setActivityLevel(e.target.value)}
-          className="border rounded px-2 py-1 w-full"
+          className="peer h-10 w-full border border-slate-400 px-2 text-slate-900 placeholder-slate-400 transition-colors duration-300 focus:border-sky-400 focus:outline-none"
         >
           <option value="sedentary">Sedentary (little or no exercise)</option>
           <option value="lightlyActive">
